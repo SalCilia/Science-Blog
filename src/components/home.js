@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import BlogPost from "./blogpost"
 
 function Home({posts}) {
@@ -6,7 +6,7 @@ function Home({posts}) {
         <div>
             {posts.map(post => {
                 return(
-                    <BlogPost post={post} />
+                    <BlogPost post={post} key={post.Title}/>
                 )
             })}
         </div>

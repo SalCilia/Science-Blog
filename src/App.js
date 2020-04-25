@@ -26,16 +26,15 @@ function App() {
   const history = useHistory()
 
   function executeSearch() {
+    let newResults = []
     blogPosts.forEach(post => {
-      if (post.Text.includes(search)) {
-        let newResults = results.slice()
+      if(post.Text.includes(search)){
         newResults.push(post)
-        setResults(newResults)
       }
     })
+    setResults(newResults)
     history.push("/search")
   }
-
   return (
     <div>
       <div><h1>TITLE</h1></div>
