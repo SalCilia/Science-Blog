@@ -1,6 +1,6 @@
 import React from "react";
 
-function BlogPosts({ post: { Title, Author, Text } }) {
+function BlogPosts({ post: { Title, Author, Text }}) {
   return (
       <ul>
         <li>{Title}</li>
