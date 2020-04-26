@@ -1,23 +1,27 @@
-import React from "react"
+import React from "react";
+import SearchResult from "./searchresult";
 
 function SearchResults({ results }) {
-
+  function render() {
     return (
-        <>
-            {results.length > 0 ? (
-                <>
-                    {results.map(result => {
-                        return (
-                            <div key = {result.Title}>
-                                <h2>{result.Title}</h2>
-                                <p>{result.Text}</p>
-                            </div>
-                        )
-                    })}
-                    </>) : (<>Nothing found try and again</>)}
-        </>
+      <>
+        {results.length > 0 ? (
+          <>
+            {results.map((result) => {
+              return <SearchResult post={result} key={result.Title} />;
+            })}
+          </>
+        ) : (
+          <>
+            <br />
+            Nothing found try and again
+          </>
+        )}
+      </>
+    );
+  }
 
-    )
+  return render();
 }
 
-export default SearchResults
+export default SearchResults;
