@@ -4,7 +4,8 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import SearchResults from "./components/searchresults";
-import Error from './components/error'
+import Error from './components/error';
+
 
 function App() {
   const BLOGPOSTS = [{
@@ -69,5 +70,8 @@ function App() {
     </div>
   );
 }
+
+
+
 
 export default App;
